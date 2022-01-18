@@ -1,0 +1,18 @@
+1.要提交的文件必须放在Git_resposity文件夹内，即本地仓库内
+2.查看版本：git --version
+3.清屏：clear
+4.设置签名：
+设置邮箱：git config --global user.name "***"
+设置邮箱：git config --global user.email "***"
+5.本地仓库初始化：在本地文件夹内点开git bash,输入 git init
+6.查看文件信息：ll   &&(隐藏项目)ll -la
+7.文件提交到暂存区：git add 文件名
+8.将暂存区的内容提交到本地库：git commit -m "此填注释的内容" 文件名
+9.查看工作区和暂存区的状态：git status
+10.文件内容更改也需要重新add和commit
+11.查看历史记录，即查看日志：git log
+12.日志下一页：空格  上一页：B  退出：Q  到尾页显示END
+13.日志信息简化显示：
+git log --pretty=oneline
+git log --oneline
+git reflog
