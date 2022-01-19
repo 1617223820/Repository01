@@ -1,4 +1,4 @@
-1.要提交的文件必须放在Git_resposity文件夹内，即本地仓库内
+1.要提交的文件必须放在Git_resposity文件夹内，即工作区内
 2.查看版本：git --version
 3.清屏：clear
 4.设置签名：
@@ -6,8 +6,8 @@
 设置邮箱：git config --global user.email "***"
 5.本地仓库初始化：在本地文件夹内点开git bash,输入 git init
 6.查看文件信息：ll   &&(隐藏项目)ll -la
-7.文件提交到暂存区：git add 文件名
-8.将暂存区的内容提交到本地库：git commit -m "此填注释的内容" 文件名
+*7.文件提交到暂存区：git add 文件名
+*8.将暂存区的内容提交到本地库：git commit -m "此填注释的内容" [文件名]
 9.查看工作区和暂存区的状态：git status
 10.文件内容更改也需要重新add和commit
 11.查看历史记录，即查看日志：git log
@@ -15,4 +15,19 @@
 13.日志信息简化显示：
 git log --pretty=oneline
 git log --oneline
-git reflog
+*git reflog
+*14.前进或后退到历史版本：git reset --hard [想跳的版本的索引]，所有区域都会移动
+15.本地库的指针移动的同时，重置暂存区，但是工作区不动：git reset  --mixed
+16.本地库指针移动，暂存区，工作区都不移动：git resrt --soft
+*17.删除文件：rm [文件名]（只是删除工作区的文件，还需要用add和commit操作同步到暂存区和本地库）
+18.删除的文件依然可以回退
+19.比较工作区和暂存区里面所有文件：git diff
+20.比较工作区和暂存区里面的文件：git diff [需要比对的文件名]
+21.比较暂存区和工作区中文件的差异：
+git diff [历史版本索引] [文件名]
+git diff HEAD [文件名]
+*22.创建分支：git branch [创建的分支名]
+查看分支：git branch -v (查看分支时，*在哪个分支前面就说明此时就在该分支上)
+切换分支：git checkout [分支名]
+合并分支：git merge [需要合并的分支名]  （合并后会一直处于合并状态，必须提交至本地库才能结束合并状态。并且在commit时不能在后面加文件名）
+23.查看文件内容：cat [文件名]
